@@ -1,0 +1,25 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('school.jpeg') no-repeat center center/cover; 
+    /* replace 'path_to_a_background_image.jpg' with your image's path */
+}
+
+.home-title {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.home-description {
+    font-size: 1.5rem;
+    color: #ddd;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}

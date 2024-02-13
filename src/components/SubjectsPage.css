@@ -1,0 +1,82 @@
+/* Main Container */
+.students-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Student CRUD Operations */
+  .student-input-container {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .student-input {
+    flex: 1;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .add-update-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-update-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Student List */
+  .student-list {
+    width: 100%;
+  }
+  
+  .student-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+  
+  .student-list-item button {
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #f39c12;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-btn:hover {
+    background-color: #d87c0a;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  

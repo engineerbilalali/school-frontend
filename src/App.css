@@ -1,0 +1,58 @@
+/* Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6; /* Improved readability */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navigation Styles */
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #444; /* Gives a slight depth */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav li {
+    display: inline;
+    margin: 0 0.5rem; /* Gives space between inline list items */
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Increases click/tap area */
+    border-radius: 4px; /* Makes the hover effect rounded */
+    transition: background-color 0.3s, color 0.3s; /* Added background to transition */
+  }
+  
+  nav a:hover {
+    color: #333; /* Made text darker on hover for contrast */
+    background-color: #f4f4f4;
+  }
+  
+  /* End of App.css */
+  
