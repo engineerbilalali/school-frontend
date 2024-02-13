@@ -12,21 +12,21 @@ function TeachersPage() {
     }, []);
 
     const fetchTeachers = () => {
-        axios.get('http://localhost:3000/teachers').then(response => {
+        axios.get('https://fluffy-frog-loincloth.cyclic.app/teachers').then(response => {
             setTeachers(response.data);
         });
     };
 
     const handleAddOrUpdateTeacher = () => {
         if (selectedTeacher) {
-            axios.put(`http://localhost:3000/teachers/${selectedTeacher}`, { name: teacherName })
+            axios.put(`https://fluffy-frog-loincloth.cyclic.app/teachers/${selectedTeacher}`, { name: teacherName })
                 .then(() => {
                     fetchTeachers();
                     setTeacherName('');
                     setSelectedTeacher(null);
                 });
         } else {
-            axios.post('http://localhost:3000/teachers', { name: teacherName })
+            axios.post('https://fluffy-frog-loincloth.cyclic.app/teachers', { name: teacherName })
                 .then(() => {
                     fetchTeachers();
                     setTeacherName('');
@@ -40,7 +40,7 @@ function TeachersPage() {
     };
 
     const handleDeleteTeacher = (id) => {
-        axios.delete(`http://localhost:3000/teachers/${id}`)
+        axios.delete(`https://fluffy-frog-loincloth.cyclic.app/teachers/${id}`)
             .then(() => {
                 fetchTeachers();
             });
