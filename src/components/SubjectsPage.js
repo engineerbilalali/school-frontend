@@ -12,21 +12,21 @@ function SubjectsPage() {
     }, []);
 
     const fetchSubjects = () => {
-        axios.get('http://localhost:3000/subjects').then(response => {
+        axios.get('https://fluffy-frog-loincloth.cyclic.app/subjects').then(response => {
             setSubjects(response.data);
         });
     };
 
     const handleAddOrUpdateSubject = () => {
         if (selectedSubject) {
-            axios.put(`http://localhost:3000/subjects/${selectedSubject}`, { name: subjectName })
+            axios.put(`https://fluffy-frog-loincloth.cyclic.app/subjects/${selectedSubject}`, { name: subjectName })
                 .then(() => {
                     fetchSubjects();
                     setSubjectName('');
                     setSelectedSubject(null);
                 });
         } else {
-            axios.post('http://localhost:3000/subjects', { name: subjectName })
+            axios.post('https://fluffy-frog-loincloth.cyclic.app/subjects', { name: subjectName })
                 .then(() => {
                     fetchSubjects();
                     setSubjectName('');
@@ -40,7 +40,7 @@ function SubjectsPage() {
     };
 
     const handleDeleteSubject = (id) => {
-        axios.delete(`http://localhost:3000/subjects/${id}`)
+        axios.delete(`https://fluffy-frog-loincloth.cyclic.app/subjects/${id}`)
             .then(() => {
                 fetchSubjects();
             });
