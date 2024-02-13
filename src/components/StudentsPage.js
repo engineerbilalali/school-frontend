@@ -8,22 +8,22 @@ function StudentsPage() {
     const [studentName, setStudentName] = useState('');
 
     useEffect(() => {
-        // Assuming your backend server is running on 'http://localhost:3000'
-        axios.get('http://localhost:3000/students').then(response => {
+        // Assuming your backend server is running on 'https://fluffy-frog-loincloth.cyclic.app'
+        axios.get('https://fluffy-frog-loincloth.cyclic.app/students').then(response => {
             setStudents(response.data);
         });
     }, []);
 
     const handleAddOrUpdateStudent = () => {
         if (selectedStudent) {
-            axios.put(`http://localhost:3000/students/${selectedStudent}`, { name: studentName })
+            axios.put(`https://fluffy-frog-loincloth.cyclic.app/students/${selectedStudent}`, { name: studentName })
                 .then(() => {
                     fetchStudents();
                     setStudentName('');
                     setSelectedStudent(null);
                 });
         } else {
-            axios.post('http://localhost:3000/students', { name: studentName })
+            axios.post('https://fluffy-frog-loincloth.cyclic.app/students', { name: studentName })
                 .then(() => {
                     fetchStudents();
                     setStudentName('');
@@ -32,7 +32,7 @@ function StudentsPage() {
     };
 
     const fetchStudents = () => {
-        axios.get('http://localhost:3000/students').then(response => {
+        axios.get('https://fluffy-frog-loincloth.cyclic.app/students').then(response => {
             setStudents(response.data);
         });
     };
@@ -43,7 +43,7 @@ function StudentsPage() {
     };
 
     const handleDeleteStudent = (id) => {
-        axios.delete(`http://localhost:3000/students/${id}`)
+        axios.delete(`https://fluffy-frog-loincloth.cyclic.app/students/${id}`)
             .then(() => {
                 fetchStudents();
             });
